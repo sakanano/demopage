@@ -1,0 +1,466 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a:visited {
+  color: inherti;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=reset.css.map */
+.wrap {
+  width: 60%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+@media screen and (max-width: 599px) {
+  .wrap {
+    width: 100%;
+  }
+  .wrap h2 {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .wrap p {
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  display: flex;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  padding-bottom: 40px;
+}
+.title::before {
+  display: block;
+  content: "";
+  border: 1px solid;
+  width: 100%;
+  margin-right: 80px;
+}
+.title::after {
+  display: block;
+  content: "";
+  border: 1px solid;
+  width: 100%;
+  margin-left: 80px;
+}
+
+p {
+  line-height: 2rem;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+}
+@media screen and (max-width: 599px) {
+  header {
+    border-bottom: solid 1px gray;
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header-wrap {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    width: 90%;
+    z-index: 10;
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  text-align: center;
+}
+.logo .logo_img {
+  height: 80px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 599px) {
+  .logo .logo_img {
+    height: 50px;
+    width: 80px;
+    margin: 0 auto;
+  }
+}
+
+.pannel {
+  height: 130px;
+}
+@media screen and (max-width: 599px) {
+  .pannel {
+    display: none;
+  }
+}
+.pannel .menu {
+  display: flex;
+  justify-content: center;
+}
+.pannel li {
+  padding: 50px 25px;
+}
+.pannel a {
+  display: inline-block;
+  position: relative;
+  color: #555;
+}
+.pannel a:hover {
+  color: #d0d0d0;
+}
+.pannel a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: #d0d0d0;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+.pannel a:hover:before {
+  transform: scale(1);
+}
+
+#ham {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  #ham {
+    width: 25px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+  }
+  #ham span {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+  }
+}
+
+#line1, #line2, #line3 {
+  transition: 1s;
+}
+
+#nav {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  #nav {
+    display: inline-block;
+    transition: 1s;
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    z-index: 100;
+    color: #000;
+    background-color: #fff;
+  }
+  #nav li {
+    width: 100%;
+    text-align: center;
+    border: solid 0.5px #d0d0d0;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 10px 0 10px;
+  }
+  #nav li:hover {
+    background-color: #d0d0d0;
+  }
+  #nav li a {
+    display: inline-block;
+    position: relative;
+    color: #555;
+  }
+  #nav li a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: #555;
+    transform: scale(0, 1);
+    transition: 0.4s;
+  }
+  #nav li a:hover:before {
+    transform: scale(1);
+  }
+}
+
+.in {
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.line_1 {
+  transform: rotate(30deg);
+  transition: 2s;
+}
+
+.line_2 {
+  opacity: 0;
+}
+
+.line_3 {
+  transform: rotate(-30deg);
+  transition: 2s;
+}
+
+#img_1 {
+  margin: 0 10%;
+}
+@media screen and (max-width: 599px) {
+  #img_1 {
+    padding-top: 70px;
+    margin: 0;
+  }
+}
+#img_1 img {
+  height: 530px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.group {
+  display: flex;
+}
+@media screen and (max-width: 599px) {
+  .group {
+    display: block;
+  }
+}
+.group img {
+  width: 33%;
+  object-fit: cover;
+}
+@media screen and (max-width: 599px) {
+  .group img {
+    width: 100%;
+  }
+}
+
+#project img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#img_2 img {
+  height: 530px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.brand-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto 70px;
+}
+@media screen and (max-width: 599px) {
+  .brand-wrap {
+    display: block;
+    width: 90%;
+  }
+}
+.brand-wrap .brand {
+  width: 25%;
+}
+@media screen and (max-width: 599px) {
+  .brand-wrap .brand {
+    width: 100%;
+  }
+}
+.brand-wrap .brand img {
+  width: 100%;
+  background: #f6f6f6;
+}
+.brand-wrap .brand p {
+  margin-top: 50px;
+}
+@media screen and (max-width: 599px) {
+  .brand-wrap .brand p {
+    margin-bottom: 80px;
+  }
+}
+
+#img_3 {
+  height: 560px;
+  width: 100%;
+  position: relative;
+}
+#img_3 .bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#img_3 .fg {
+  height: 105px;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.company {
+  padding-bottom: 90px;
+}
+
+.access_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 599px) {
+  .access_wrap {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.icon {
+  display: flex;
+}
+.icon a {
+  margin: 20px 5px 0 0;
+}
+
+.map {
+  width: 60%;
+  height: 400px;
+}
+@media screen and (max-width: 599px) {
+  .map {
+    width: 100%;
+    padding-top: 30px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 0.5rem;
+}
+footer a {
+  color: blue;
+}
+
+/*# sourceMappingURL=main.css.map */

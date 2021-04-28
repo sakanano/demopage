@@ -1,0 +1,30 @@
+.company {
+    padding-bottom: 90px;
+}
+
+.access_wrap {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.icon {
+    display: flex;
+    a {
+        margin: 20px 5px 0 0;
+        
+    }
+}
+
+.map {
+    width: 60%;
+    height: 400px;
+    @include sp {
+        width: 100%;
+        padding-top: 30px;
+    }
+}

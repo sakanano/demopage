@@ -1,0 +1,23 @@
+const button = document.querySelector('.icon')
+
+button.addEventListener('click',event => {
+    alert("ページ移動します")
+})
+
+
+
+//
+
+
+//function hamberger (){
+//    document.getElementById('nav').classList.toggle('in')
+//}
+
+document.getElementById('ham').addEventListener('click', event=> {
+    document.getElementById('line1').classList.toggle('line_1');
+    document.getElementById('line2').classList.toggle('line_2');
+    document.getElementById('line3').classList.toggle('line_3');
+    document.getElementById('nav').classList.toggle('in');
+
+})
+

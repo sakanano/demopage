@@ -1,0 +1,13 @@
+.group {
+    display: flex;
+    @include sp {
+        display: block;
+    }
+    img {
+        width: 33%;
+        object-fit: cover;
+        @include sp {
+            width: 100%;
+        }
+    }
+}

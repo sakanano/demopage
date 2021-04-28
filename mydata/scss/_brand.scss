@@ -1,0 +1,27 @@
+.brand-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto 70px;
+    @include sp {
+        display: block;
+        width: 90%;
+    }
+    .brand {
+        width: 25%;
+        @include sp {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            background: #f6f6f6;
+        }
+        p {
+            margin-top: 50px;
+            @include sp {
+                margin-bottom: 80px;
+            }
+        }
+
+    }
+}
